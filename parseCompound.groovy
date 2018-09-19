@@ -6,11 +6,9 @@
 
 		while (m.find()){
 			def ele = m.group()			
-			//println ("m.group():"+ ele)
 			def ele_digit=0.0
 			
 			def ele_sym = ele.matches(".*\\d+.*") ? ele.replaceAll("([0-9]\\/[0-9]|[0-9]*\\.?[0-9]+|[0-9]*)","").toString() : ele
-			//println("ele_sym: "+ele_sym)
 			
 			if (ele.matches(".*[0-9]\\/[0-9].*")){ // fractions
 				def ele_digit_temp = ele.replaceAll(ele_sym,"")
